@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  padding: 30px;
+  background: #f1fbfb;
+  color: #484848;
+  height: 100%;
 }
 
 .App * {
@@ -7,5 +11,9 @@
 }
 
 .Result {
-  
+  padding-top: 10px;
+}
+
+html, body, #root {
+  height: 100%;
 }

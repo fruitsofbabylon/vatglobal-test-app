@@ -18,6 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1> Please select your dates!</h1>
         <DateRangePicker
           startDate={this.state.startDate} // momentPropTypes.momentObj or null,
           startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
@@ -31,9 +32,11 @@ class App extends Component {
           startDate={this.state.startDate} 
           endDate={this.state.endDate}
         />
-        <Fact
-          startDate={this.state.endDate != null && this.state.startDate}
-        />
+        {this.state.endDate != null &&
+          <Fact
+            startDate={this.state.startDate}
+          />
+        }
       </div>
     );
   }
@@ -51,8 +54,8 @@ class Result extends Component {
     }
     let numOfDays = endDate.diff(startDate, 'days')
 
-    let startYear = startDate.isLeapYear()
-    let endYear = endDate.isLeapYear()
+    const startYear = startDate.isLeapYear()
+    const endYear = endDate.isLeapYear()
 
     // Show if the chosen start/end dates belong to the leap year
     let leap = ""
@@ -66,12 +69,12 @@ class Result extends Component {
 
     // Calculate the number of Mondays between two chosen dates
     const isoWeekday = 1
-    var daysToAdd = ((7 + isoWeekday) - startDate.isoWeekday()) % 7
-    var nextMonday = startDate.clone().add(daysToAdd, 'days')
+    const daysToAdd = ((7 + isoWeekday) - startDate.isoWeekday()) % 7
+    const nextMonday = startDate.clone().add(daysToAdd, 'days')    
+    let weeksBetween = endDate.diff(nextMonday, 'weeks') + 1
     if (nextMonday.isAfter(endDate)) {
-      return null
+      weeksBetween = 0
     }
-    var weeksBetween = endDate.diff(nextMonday, 'weeks');
 
     return(
       <div className="Result">
@@ -79,7 +82,7 @@ class Result extends Component {
         {leap !== "" &&
           <h3>{leap} part of leap year</h3>
         }
-        <h3> The number of Mondays between the chosen dates is {weeksBetween + 1} </h3>
+        <h3> The number of Mondays between the chosen dates is {weeksBetween} </h3>
       </div>
     )
   }
@@ -91,12 +94,8 @@ class Fact extends Component {
     this.state = { text: "" }
   }
 
-  componentDidUpdate(prevProps) {
+  loadFact () {
     const startDate = this.props.startDate
-    if (prevProps.startDate === startDate) {
-      return
-    }
-
     if (startDate == null) {
       this.setState({text: ""})
       return
@@ -109,6 +108,19 @@ class Fact extends Component {
     }).then (factText => {
       this.setState({text: factText})
     })
+  }
+
+  componentDidUpdate(prevProps) {
+    console.log(prevProps, this.props)
+
+    if (prevProps.startDate === this.props.startDate) {
+      return
+    }
+    this.loadFact()
+  }
+
+  componentDidMount() {
+    this.loadFact()
   }
 
   render() {

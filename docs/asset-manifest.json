@@ -1,15 +1,15 @@
 {
-  "main.css": "/vatglobal-test-app/static/css/main.b402b1f7.chunk.css",
-  "main.js": "/vatglobal-test-app/static/js/main.0c1dd75c.chunk.js",
-  "main.js.map": "/vatglobal-test-app/static/js/main.0c1dd75c.chunk.js.map",
+  "main.css": "/vatglobal-test-app/static/css/main.e7a131c6.chunk.css",
+  "main.js": "/vatglobal-test-app/static/js/main.51b2adfc.chunk.js",
+  "main.js.map": "/vatglobal-test-app/static/js/main.51b2adfc.chunk.js.map",
   "runtime~main.js": "/vatglobal-test-app/static/js/runtime~main.92b9eeae.js",
   "runtime~main.js.map": "/vatglobal-test-app/static/js/runtime~main.92b9eeae.js.map",
   "static/css/2.73bbfc4c.chunk.css": "/vatglobal-test-app/static/css/2.73bbfc4c.chunk.css",
   "static/js/2.da6de1a1.chunk.js": "/vatglobal-test-app/static/js/2.da6de1a1.chunk.js",
   "static/js/2.da6de1a1.chunk.js.map": "/vatglobal-test-app/static/js/2.da6de1a1.chunk.js.map",
   "index.html": "/vatglobal-test-app/index.html",
-  "precache-manifest.785e242d9c94a27aef47f129514a1f00.js": "/vatglobal-test-app/precache-manifest.785e242d9c94a27aef47f129514a1f00.js",
+  "precache-manifest.be10ea6747674946f6048112c9ed3dba.js": "/vatglobal-test-app/precache-manifest.be10ea6747674946f6048112c9ed3dba.js",
   "service-worker.js": "/vatglobal-test-app/service-worker.js",
   "static/css/2.73bbfc4c.chunk.css.map": "/vatglobal-test-app/static/css/2.73bbfc4c.chunk.css.map",
-  "static/css/main.b402b1f7.chunk.css.map": "/vatglobal-test-app/static/css/main.b402b1f7.chunk.css.map"
+  "static/css/main.e7a131c6.chunk.css.map": "/vatglobal-test-app/static/css/main.e7a131c6.chunk.css.map"
 }
