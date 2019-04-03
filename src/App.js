@@ -103,7 +103,7 @@ class Fact extends Component {
     }
     var factDate = startDate.format("MM/DD")
 
-    fetch(`https://numbersapi.com/${factDate}/date`)
+    fetch(`http://numbersapi.com/${factDate}/date`)
     .then (results => {
       return results.text()
     }).then (factText => {
