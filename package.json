@@ -2,6 +2,7 @@
   "name": "vatglobal-test-app",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://fruitsofbabylon.github.io/vatglobal-test-app",
   "dependencies": {
     "moment": "^2.24.0",
     "react": "^16.8.6",
