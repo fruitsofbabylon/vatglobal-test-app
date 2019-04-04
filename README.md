@@ -1,3 +1,14 @@
+For this test project I created a responsive app with the following requirements:
+1) Clickable text field (calendar with the possibility to select a date range)
+2) Automatical detection of any change of calendar range dates
+3) Display in a box below the text field:
+a. Number of days between the date range
+b. Is the start date and/or end date part of a leap year?
+c. Number of Mondays in this date range
+d. “What happened on this day” fact from the Numbers API (for the start date from the range). This is only possible to do locally since Numbers API does not support secure https connection. 
+
+I used npm, React, Moment.js and Numbers API for creation of this app.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
